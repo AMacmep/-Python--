@@ -5,9 +5,6 @@ not_primes=[]
 for index in range(len(numbers)):
     if numbers[index]<=1:
         continue
-    elif numbers[index] == 2:
-        primes.append(numbers[index])
-        continue
     is_prime = True
     for N in range(2, numbers[index]):
         if numbers[index] % N == 0:
