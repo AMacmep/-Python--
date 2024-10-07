@@ -6,10 +6,8 @@ directory = '.'
 for root, dirs, files in os.walk(directory):
     for file in files:
         filepath = os.path.join(root, file)
-        print(filepath)
         filetime = os.path.getmtime(filepath)
-        print(filetime)
-        formatted_time = time.strftime("%d.%m.%Y %H:%M", time.localtime())
+        formatted_time = time.strftime("%d.%m.%Y %H:%M", time.localtime(filepath))
         filesize = os.path.getsize(filepath)
         parent_dir = os.path.dirname(filepath)
         print(
